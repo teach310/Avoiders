@@ -10,7 +10,7 @@ public class PlayerCore : MonoBehaviour {
 	void Start () {
 		PlayerInput playerInput = GetComponent<PlayerInput>();
 		playerInput.isRightPressDown
-		.DistinctUntilChanged().Subscribe(x => {
+		.Subscribe(x => {
 			if(x){
 				RightBallGameObj.transform.position = new Vector3(3, 0.67f, 0);
 			}else{
