@@ -18,6 +18,8 @@ public class HighScoreManager : MonoBehaviour
         NCMBObject obj = new NCMBObject(TABLE_NAME);
         obj.Add(USERNAME, PlayerPrefs.GetString("name"));
         obj.Add(HIGH_SCORE, score);
+        if (PlayerPrefs.HasKey("ObjectId"))
+            obj.ObjectId = PlayerPrefs.GetString("ObjectId");
         obj.SaveAsync((NCMBException e) =>
         {
             if (e != null)
@@ -29,6 +31,7 @@ public class HighScoreManager : MonoBehaviour
             {
                 //成功時の処理
                 Debug.Log("score data sent successfully");
+                PlayerPrefs.SetString("ObjectId", obj.ObjectId);
             }
         });
     }

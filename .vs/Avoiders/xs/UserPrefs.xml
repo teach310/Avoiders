@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{3C93FA5E-728F-62D3-DC81-7CDAB3DEC80D}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameMain/Scripts/test/HighScoreManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameMain/Scripts/HighScoreManager.cs">
     <Files>
-      <File FileName="Assets/GameMain/Scripts/test/RankingManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameMain/Scripts/test/DataManager.cs" Line="16" Column="2" />
-      <File FileName="Assets/GameMain/Scripts/test/HighScore.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameMain/Scripts/test/HighScoreManager.cs" Line="16" Column="22" />
+      <File FileName="Assets/GameMain/Scripts/SendScoreSceneManager.cs" Line="12" Column="64" />
+      <File FileName="Assets/GameMain/Scripts/HighScoreManager.cs" Line="41" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
