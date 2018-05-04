@@ -5,18 +5,11 @@ using UnityEngine;
 public class WallSpawner : MonoBehaviour {
 
     public GameObject wall;
-    public GameObject spawner;
 
-	// Use this for initialization
-	void Start () {
+    public void GameStart(){
         StartCoroutine("SpawnWall");
-	}
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        
-	}
-
     private IEnumerator SpawnWall()
     {
         int n = 0;
@@ -39,7 +32,7 @@ public class WallSpawner : MonoBehaviour {
                 default:
                     break;
             }
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.8f);
         }
     }
 }
