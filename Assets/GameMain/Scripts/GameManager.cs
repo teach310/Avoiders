@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
 public class GameManager : MonoBehaviour {
 	public enum GameStatus{
@@ -13,10 +14,8 @@ public class GameManager : MonoBehaviour {
 	public Text scoreText;
 	public GameObject gameOverPanel;
 	public int Score { get; private set; }
-	public void SetScore(){
-		Score++;
-	}
 	void Start () {
+		MessageBroker.Default.Receive<ScoreBlockHit>().Subscribe(_ => Score++);
 		Status = GameStatus.PLAY;
 	}
 	
