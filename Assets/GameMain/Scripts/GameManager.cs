@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject gameOverPanel;
 	public int Score { get; private set; }
 	void Start () {
-		MessageBroker.Default.Receive<ScoreBlockHit>().Subscribe(_ => Score++);
+		MessageBroker.Default.Receive<ScoreBlockHit>().Subscribe(_ => {
+			Score++;
+			scoreText.text = Score + "pt";
+		});
 		Status = GameStatus.PLAY;
 	}
 	
@@ -23,7 +26,6 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		switch(Status){
 			case GameStatus.PLAY:
-				scoreText.text = Score + "pt";
 				break;
 			case GameStatus.GAMEOVER:
 				break;
