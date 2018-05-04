@@ -6,6 +6,7 @@ using UniRx;
 
 public class GameManager : MonoBehaviour {
 	public enum GameStatus{
+		START,
 		PLAY,
 		GAMEOVER,
 		PAUSE
@@ -13,18 +14,21 @@ public class GameManager : MonoBehaviour {
 	private GameStatus Status;
 	public Text scoreText;
 	public GameObject gameOverPanel;
+	public GameObject startPanel;
 	public int Score { get; private set; }
 	void Start () {
 		MessageBroker.Default.Receive<ScoreBlockHit>().Subscribe(_ => {
 			Score++;
 			scoreText.text = Score + "pt";
 		});
-		Status = GameStatus.PLAY;
+		Status = GameStatus.START;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		switch(Status){
+			case GameStatus.START:
+				break;
 			case GameStatus.PLAY:
 				break;
 			case GameStatus.GAMEOVER:
@@ -32,6 +36,11 @@ public class GameManager : MonoBehaviour {
 			case GameStatus.PAUSE:
 				break;
 		}
+	}
+
+	public void GameStart(){
+		startPanel.SetActive(false);
+		Status = GameStatus.PLAY;
 	}
 
 	void GameOver(){
