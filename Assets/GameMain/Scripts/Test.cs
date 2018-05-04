@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// feature
 public class Test : MonoBehaviour {
 
 	// Use this for initialization

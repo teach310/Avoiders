@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{3C93FA5E-728F-62D3-DC81-7CDAB3DEC80D}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameMain/Scripts/WallSpawner.cs">
+    <Files>
+      <File FileName="Assets/GameMain/Scripts/Wall.cs" Line="13" Column="59" />
+      <File FileName="Assets/GameMain/Scripts/WallSpawner.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
